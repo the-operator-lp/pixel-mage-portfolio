@@ -1,12 +1,12 @@
 
 import React from 'react';
 import Header from '@/components/Header';
-import Hero from '@/components/Hero';
-import QuestLog from '@/components/QuestLog';
-import SkillTree from '@/components/SkillTree';
-import BattleRecords from '@/components/BattleRecords';
-import Inventory from '@/components/Inventory';
-import ContactScroll from '@/components/ContactScroll';
+import SummoningScroll from '@/components/SummoningScroll';
+import QuestTome from '@/components/QuestTome';
+import Codex from '@/components/Codex';
+import Arena from '@/components/Arena';
+import Grimoire from '@/components/Grimoire';
+import VoidGate from '@/components/VoidGate';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -14,12 +14,12 @@ const Index = () => {
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-grow">
-        <Hero />
-        <QuestLog />
-        <SkillTree />
-        <BattleRecords />
-        <Inventory />
-        <ContactScroll />
+        <SummoningScroll />
+        <QuestTome />
+        <Codex />
+        <Arena />
+        <Grimoire />
+        <VoidGate />
       </main>
       <Footer />
     </div>
