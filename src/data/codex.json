@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Void Terminal",
+        "description": "A customizable terminal emulator with advanced features for developers and dark-themed UI options.",
+        "languages": ["TypeScript", "React", "Electron"],
+        "stars": 148,
+        "forks": 32,
+        "link": "https://github.com/shadowcaster/void-terminal"
+    },
+    {
+        "name": "Hex Engine",
+        "description": "Low-level graphics library for creating procedural dark fantasy visuals and animations.",
+        "languages": ["C++", "WebGL", "GLSL"],
+        "stars": 87,
+        "forks": 14,
+        "link": "https://github.com/shadowcaster/hex-engine"
+    },
+    {
+        "name": "Rune Parser",
+        "description": "A compiler that translates mystical rune patterns into executable JavaScript code.",
+        "languages": ["JavaScript", "ANTLR", "NodeJS"],
+        "stars": 63,
+        "forks": 9,
+        "link": "https://github.com/shadowcaster/rune-parser"
+    },
+    {
+        "name": "Grimoire",
+        "description": "Documentation generator that creates dark-themed, interactive documentation websites.",
+        "languages": ["TypeScript", "React", "Markdown"],
+        "stars": 42,
+        "forks": 7,
+        "link": "https://github.com/shadowcaster/grimoire"
+    }
+]

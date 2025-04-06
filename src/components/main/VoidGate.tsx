@@ -86,7 +86,7 @@ const VoidGate = () => {
                 <span className="text-gray-400 text-xs">CONNECTION_ACTIVE</span>
               </div>
               <p className="text-[10px] mt-2 text-gray-500 mb-4">
-                /* Encrypted channel established. Your message will be securely transmitted to the shadow_caster. */
+                /* Encrypted channel established. Your message will be securely transmitted to the world_operator. */
               </p>
             </div>
             

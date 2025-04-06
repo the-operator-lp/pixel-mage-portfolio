@@ -1,0 +1,41 @@
+[
+    {
+        "title": "Senior Code Enchanter",
+        "company": "Arcane Technologies",
+        "period": "Campaign Years 2021-Present",
+        "description": "Led a raid party of 5 developers through treacherous web application dungeons. Successfully conjured React enchantments that increased performance by 40%.",
+        "achievements": ["Implemented CI/CD battle rituals", "Mentored 7 junior warlocks", "Banished legacy code demons"],
+        "xp": 2500,
+        "skills": [
+            { "name": "React", "level": 90 },
+            { "name": "TypeScript", "level": 85 },
+            { "name": "System Architecture", "level": 75 }
+        ]
+    },
+    {
+        "title": "Full-Stack Alchemist",
+        "company": "Eldritch Solutions Inc.",
+        "period": "Campaign Years 2018-2021",
+        "description": "Transmuted raw requirements into elegant code solutions. Crafted responsive interfaces with forbidden animations.",
+        "achievements": ["Forged REST API artifacts", "Reduced loading times by 60%", "Integrated third-party magical components"],
+        "xp": 1800,
+        "skills": [
+            { "name": "Vue.js", "level": 80 },
+            { "name": "Node.js", "level": 75 },
+            { "name": "Database Design", "level": 70 }
+        ]
+    },
+    {
+        "title": "Frontend Apprentice",
+        "company": "Novice Guild Co.",
+        "period": "Campaign Years 2016-2018",
+        "description": "Learned the fundamentals of web development sorcery. Crafted HTML, CSS, and JavaScript spells to summon interactive user experiences.",
+        "achievements": ["Mastered responsive design scrolls", "Constructed jQuery components", "Implemented CSS animations"],
+        "xp": 1200,
+        "skills": [
+            { "name": "HTML/CSS", "level": 70 },
+            { "name": "JavaScript", "level": 65 },
+            { "name": "jQuery", "level": 60 }
+        ]
+    }
+]

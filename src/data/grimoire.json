@@ -1,0 +1,29 @@
+[
+    {
+        "category": "Frontend Weapons",
+        "items": [
+            { "name": "React.js", "icon": "Shield", "level": 9, "desc": "Shield of Component Rendering" },
+            { "name": "TypeScript", "icon": "Shield", "level": 8, "desc": "Armor of Type Safety" },
+            { "name": "Next.js", "icon": "Shield", "level": 7, "desc": "Helm of Server-Side Rendering" },
+            { "name": "TailwindCSS", "icon": "Wand2", "level": 9, "desc": "Wand of Responsive Styling" }
+        ]
+    },
+    {
+        "category": "Backend Arsenal",
+        "items": [
+            { "name": "Node.js", "icon": "Sword", "level": 8, "desc": "Sword of Server Execution" },
+            { "name": "Express", "icon": "Sword", "level": 8, "desc": "Dagger of API Routing" },
+            { "name": "PostgreSQL", "icon": "Database", "level": 7, "desc": "Tome of Relational Data" },
+            { "name": "Redis", "icon": "Database", "level": 6, "desc": "Potion of In-Memory Caching" }
+        ]
+    },
+    {
+        "category": "DevOps Relics",
+        "items": [
+            { "name": "Docker", "icon": "HardDrive", "level": 7, "desc": "Scroll of Containerization" },
+            { "name": "AWS", "icon": "Cpu", "level": 6, "desc": "Staff of Cloud Infrastructure" },
+            { "name": "GitHub Actions", "icon": "HardDrive", "level": 8, "desc": "Amulet of CI/CD" },
+            { "name": "Kubernetes", "icon": "Cpu", "level": 5, "desc": "Orb of Container Orchestration" }
+        ]
+    }
+]

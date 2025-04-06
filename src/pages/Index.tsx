@@ -1,12 +1,12 @@
 
 import React from 'react';
 import Header from '@/components/Header';
-import SummoningScroll from '@/components/SummoningScroll';
-import QuestTome from '@/components/QuestTome';
-import Codex from '@/components/Codex';
-import Arena from '@/components/Arena';
-import Grimoire from '@/components/Grimoire';
-import VoidGate from '@/components/VoidGate';
+import SummoningScroll from '@/components/main/SummoningScroll';
+import QuestTome from '@/components/main/QuestTome';
+import Codex from '@/components/main/Codex';
+import Arena from '@/components/main/Arena';
+import Grimoire from '@/components/main/Grimoire';
+import VoidGate from '@/components/main/VoidGate';
 import Footer from '@/components/Footer';
 
 const Index = () => {

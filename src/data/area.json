@@ -1,0 +1,24 @@
+{
+    "rank": 8642,
+    "totalSolved": 387,
+    "easyProblems": 142,
+    "mediumProblems": 204,
+    "hardProblems": 41,
+    "languages": ["JavaScript", "Python", "C++"],
+    "contests": [
+        {
+            "name": "Weekly Contest 347",
+            "rank": 983,
+            "solved": 3,
+            "total": 4,
+            "date": "2023-10-28"
+        },
+        {
+            "name": "Biweekly Contest 118",
+            "rank": 654,
+            "solved": 4,
+            "total": 4,
+            "date": "2023-10-14"
+        }
+    ]
+}
