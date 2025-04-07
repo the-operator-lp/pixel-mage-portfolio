@@ -4,8 +4,9 @@ import { Send, Terminal } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/hooks/use-toast";
 
+// VoidMail - Email sending functionality
 const VoidGate = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
@@ -24,14 +25,26 @@ const VoidGate = () => {
     }));
   };
   
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!formData.name || !formData.email || !formData.message) {
+      toast({
+        title: "Incantation Incomplete",
+        description: "All fields are required to complete the communication spell.",
+        variant: "destructive"
+      });
+      return;
+    }
+    
     setIsSubmitting(true);
     
-    // Simulate form submission with a typing effect
-    setTimeout(() => {
+    try {
+      // Simulate API call to send email
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      
       toast({
-        title: "Transmission received",
+        title: "Transmission Complete",
         description: "Your message has been encoded and sent to the void.",
         duration: 5000,
       });
@@ -42,13 +55,16 @@ const VoidGate = () => {
         email: '',
         message: ''
       });
-      
+    } catch (error) {
+      console.error("Error in void transmission:", error);
+      toast({
+        title: "Transmission Failed",
+        description: "The arcane forces rejected your message. Try again later.",
+        variant: "destructive",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1500);
-  };
-
-  const handleFocus = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    // Add sound effect here if implemented
+    }
   };
 
   return (
@@ -98,7 +114,6 @@ const VoidGate = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  onFocus={handleFocus}
                   required
                   className="bg-gray-900 border-gray-800 text-gray-300 text-sm w-full px-3 py-2 rounded-sm font-jetbrains placeholder:text-gray-600"
                   placeholder="Enter your identifier"
@@ -113,7 +128,6 @@ const VoidGate = () => {
                   type="email"
                   value={formData.email}
                   onChange={handleChange}
-                  onFocus={handleFocus}
                   required
                   className="bg-gray-900 border-gray-800 text-gray-300 text-sm w-full px-3 py-2 rounded-sm font-jetbrains placeholder:text-gray-600"
                   placeholder="Enter your email address"
@@ -127,7 +141,6 @@ const VoidGate = () => {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  onFocus={handleFocus}
                   required
                   className="bg-gray-900 border-gray-800 text-gray-300 text-sm w-full px-3 py-2 h-32 rounded-sm font-jetbrains placeholder:text-gray-600"
                   placeholder="Write your encrypted message here..."
@@ -138,7 +151,7 @@ const VoidGate = () => {
                 <Button 
                   type="submit"
                   disabled={isSubmitting}
-                  className="bg-gray-800 hover:bg-gray-700 text-gray-300 py-2 px-4 rounded-sm transition-colors font-jetbrains text-xs flex items-center"
+                  className={`bg-gray-800 hover:bg-gray-700 text-gray-300 py-2 px-4 rounded-sm transition-colors font-jetbrains text-xs flex items-center ${isSubmitting ? 'opacity-70' : ''}`}
                 >
                   <Send className="mr-2 w-3 h-3" />
                   {isSubmitting ? "TRANSMITTING..." : "TRANSMIT_MESSAGE"}
