@@ -1,103 +1,143 @@
+import React, { useState, useEffect } from 'react';
+import { Map, Compass } from 'lucide-react';
+import { Card, CardContent } from "@/components/ui/card";
 
-import React from "react";
-import { MapPin } from "lucide-react";
-
-// MapRitual - Fantasy realm map component extracted to its own file
+// Interactive realm map component with Japanese elements
 const RealmMap = () => {
+  const [activeRealm, setActiveRealm] = useState<string | null>(null);
+  const [coordinates, setCoordinates] = useState({ x: 0, y: 0 });
+
+  // Realm data with coordinates and descriptions
+  const realms = [
+    { id: 'abyss', name: '深淵', engName: 'The Abyss', x: 20, y: 80, description: 'Endless void where forgotten code resides' },
+    { id: 'nexus', name: '結合点', engName: 'The Nexus', x: 50, y: 50, description: 'Central hub connecting all digital realms' },
+    { id: 'archive', name: '古文書館', engName: 'The Archives', x: 80, y: 30, description: 'Repository of ancient knowledge and algorithms' },
+    { id: 'forge', name: '鍛冶場', engName: 'The Forge', x: 30, y: 40, description: 'Where new code is tempered and hardened' },
+    { id: 'void', name: '虚空', engName: 'The Void', x: 70, y: 70, description: 'Realm of untapped potential and possibilities' },
+  ];
+
+  // Update coordinates on mouse move over map
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = Math.round(((e.clientX - rect.left) / rect.width) * 100);
+    const y = Math.round(((e.clientY - rect.top) / rect.height) * 100);
+    setCoordinates({ x, y });
+  };
+
+  // Handle realm node click
+  const handleRealmClick = (realmId: string) => {
+    setActiveRealm(activeRealm === realmId ? null : realmId);
+  };
+
   return (
-    <section id="realm-map" className="py-16 bg-[#0a0a0a] border-t border-gray-800">
+    <section className="py-12 bg-[#0a0a0a]">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-8">
-          <h2 className="text-xl font-jetbrains mb-2 text-gray-300">THE REALM ATLAS</h2>
-          <p className="font-jetbrains text-xs text-gray-500">
-            <span className="text-gray-400">$ cartographer</span> --render-lands
-          </p>
-        </div>
-        
         <div className="max-w-3xl mx-auto">
-          <div className="aspect-square max-h-[400px] w-full relative rounded-md overflow-hidden">
-            {/* Dark overlay with grid pattern for map texture */}
-            <div className="absolute inset-0 bg-gray-900 opacity-90"></div>
-            
-            {/* Map grid lines */}
-            <div className="absolute inset-0" 
-              style={{
-                backgroundImage: `linear-gradient(rgba(80, 80, 80, 0.1) 1px, transparent 1px), 
-                                  linear-gradient(90deg, rgba(80, 80, 80, 0.1) 1px, transparent 1px)`,
-                backgroundSize: '20px 20px',
-              }}>
-            </div>
-            
-            {/* Map content */}
-            <div className="absolute inset-0 p-4">
-              {/* Mountain ranges */}
-              <div className="absolute top-[15%] left-[20%] w-[30%] h-[25%] flex items-center justify-center">
-                <div className="text-center opacity-80">
-                  <div className="text-xs text-gray-400 rotate-[-10deg]">⛰️⛰️⛰️</div>
-                  <div className="text-[10px] text-gray-500">The Shadow Peaks</div>
-                </div>
-              </div>
-              
-              {/* Forest */}
-              <div className="absolute top-[35%] right-[25%] w-[20%] h-[20%] flex items-center justify-center">
-                <div className="text-center opacity-80">
-                  <div className="text-xs text-gray-400 rotate-[5deg]">🌲🌲🌲</div>
-                  <div className="text-[10px] text-gray-500">Whispering Woods</div>
-                </div>
-              </div>
-              
-              {/* Castle */}
-              <div className="absolute top-[55%] left-[50%] transform -translate-x-1/2 w-[15%] h-[15%] flex items-center justify-center">
-                <div className="text-center opacity-80">
-                  <div className="text-xs text-gray-300">🏰</div>
-                  <div className="text-[10px] text-gray-400">Dread Keep</div>
-                </div>
-              </div>
-              
-              {/* Ancient ruins */}
-              <div className="absolute bottom-[20%] left-[15%] w-[15%] h-[15%] flex items-center justify-center">
-                <div className="text-center opacity-80">
-                  <div className="text-xs text-gray-400 rotate-[8deg]">🏛️</div>
-                  <div className="text-[10px] text-gray-500">Forgotten Ruins</div>
-                </div>
-              </div>
-              
-              {/* Dungeon */}
-              <div className="absolute bottom-[25%] right-[20%] w-[15%] h-[15%] flex items-center justify-center">
-                <div className="text-center opacity-80">
-                  <div className="text-xs text-gray-400 rotate-[-5deg]">🧪</div>
-                  <div className="text-[10px] text-gray-500">Crypts of Code</div>
-                </div>
-              </div>
-              
-              {/* Map compass */}
-              <div className="absolute top-2 right-2 text-xs text-gray-500">
-                <div>N</div>
-                <div className="flex">
-                  <span>W</span>
-                  <span className="mx-2">+</span>
-                  <span>E</span>
-                </div>
-                <div>S</div>
-              </div>
-              
-              {/* Map title */}
-              <div className="absolute bottom-2 left-2 text-[8px] text-gray-600 italic">
-                Cartographer's Notes: The Dark Realms of Code & Logic
-              </div>
-            </div>
-            
-            {/* Map border */}
-            <div className="absolute inset-0 border border-gray-700 rounded-md pointer-events-none"></div>
-            
-            {/* Animated glowing points (magical locations) */}
-            <div className="absolute top-[30%] left-[40%] h-1 w-1 rounded-full bg-gray-300 opacity-50 animate-pulse"></div>
-            <div className="absolute top-[60%] left-[65%] h-1 w-1 rounded-full bg-gray-300 opacity-50 animate-pulse"></div>
-            <div className="absolute top-[75%] left-[30%] h-1 w-1 rounded-full bg-gray-300 opacity-50 animate-pulse"></div>
+          <div className="text-center mb-8">
+            <h2 className="text-xl font-jetbrains mb-2 text-gray-300">
+              <span lang="ja" className="block text-sm text-gray-500 mb-1">世界地図</span>
+              REALM ATLAS
+            </h2>
+            <p className="text-xs text-gray-500 font-jetbrains">
+              <span className="text-gray-400">$</span> ./navigate_realms.sh --verbose
+            </p>
           </div>
           
-          <div className="text-xs text-gray-500 mt-4 text-center italic">
-            * This map reveals the magical realms traversed on the developer's journey.
+          <div className="relative border border-gray-800 rounded-md overflow-hidden bg-[#0d0d0d]">
+            {/* Map container */}
+            <div 
+              className="relative w-full h-64 md:h-80" 
+              onMouseMove={handleMouseMove}
+            >
+              {/* Grid lines */}
+              <div className="absolute inset-0 grid grid-cols-10 grid-rows-10">
+                {Array.from({ length: 10 }).map((_, i) => (
+                  <React.Fragment key={i}>
+                    {Array.from({ length: 10 }).map((_, j) => (
+                      <div key={`${i}-${j}`} className="border border-gray-800/30"></div>
+                    ))}
+                  </React.Fragment>
+                ))}
+              </div>
+              
+              {/* Realm nodes */}
+              {realms.map((realm) => (
+                <div 
+                  key={realm.id}
+                  className={`absolute w-3 h-3 rounded-full cursor-pointer transition-all duration-300 ${
+                    activeRealm === realm.id 
+                      ? 'bg-gray-300 shadow-[0_0_10px_rgba(255,255,255,0.5)]' 
+                      : 'bg-gray-600 hover:bg-gray-500'
+                  }`}
+                  style={{ 
+                    left: `${realm.x}%`, 
+                    top: `${realm.y}%`,
+                    transform: 'translate(-50%, -50%)'
+                  }}
+                  onClick={() => handleRealmClick(realm.id)}
+                >
+                  {/* Pulse animation for nodes */}
+                  <span className="absolute inset-0 rounded-full animate-ping bg-gray-600 opacity-75"></span>
+                  
+                  {/* Realm name tooltip */}
+                  <div className={`absolute bottom-full left-1/2 transform -translate-x-1/2 -translate-y-2 whitespace-nowrap bg-gray-900 px-2 py-1 rounded text-xs text-gray-300 transition-opacity ${
+                    activeRealm === realm.id ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
+                  }`}>
+                    <span lang="ja" className="mr-1">{realm.name}</span>
+                    <span className="text-gray-500">{realm.engName}</span>
+                  </div>
+                </div>
+              ))}
+              
+              {/* Connection lines between realms */}
+              <svg className="absolute inset-0 w-full h-full pointer-events-none">
+                {realms.map((realm, i) => (
+                  realms.slice(i + 1).map((otherRealm, j) => (
+                    <line 
+                      key={`${realm.id}-${otherRealm.id}`}
+                      x1={`${realm.x}%`}
+                      y1={`${realm.y}%`}
+                      x2={`${otherRealm.x}%`}
+                      y2={`${otherRealm.y}%`}
+                      stroke="#333"
+                      strokeWidth="1"
+                      strokeDasharray="4 4"
+                    />
+                  ))
+                ))}
+              </svg>
+              
+              {/* Coordinates display */}
+              <div className="absolute bottom-2 right-2 text-[10px] text-gray-600 font-mono">
+                x: {coordinates.x} y: {coordinates.y}
+              </div>
+            </div>
+            
+            {/* Active realm info */}
+            {activeRealm && (
+              <Card className="m-4 bg-gray-900/60 border-gray-800">
+                <CardContent className="p-4">
+                  <div className="flex items-center mb-2">
+                    <Compass className="w-4 h-4 text-gray-500 mr-2" />
+                    <h3 className="text-sm text-gray-300 font-jetbrains">
+                      <span lang="ja" className="mr-2">
+                        {realms.find(r => r.id === activeRealm)?.name}
+                      </span>
+                      {realms.find(r => r.id === activeRealm)?.engName}
+                    </h3>
+                  </div>
+                  <p className="text-xs text-gray-400">
+                    {realms.find(r => r.id === activeRealm)?.description}
+                  </p>
+                </CardContent>
+              </Card>
+            )}
+          </div>
+          
+          <div className="mt-4 text-center">
+            <p className="text-xs text-gray-600 font-jetbrains">
+              <span lang="ja" className="text-gray-500">地図の伝説</span> • Map Legend • <span lang="ja">八領域</span>
+            </p>
           </div>
         </div>
       </div>
