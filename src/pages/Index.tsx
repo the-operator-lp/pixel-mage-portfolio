@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Header from '@/components/Header';
 import SummoningScroll from '@/components/main/SummoningScroll';
@@ -8,6 +7,7 @@ import Arena from '@/components/main/Arena';
 import Grimoire from '@/components/main/Grimoire';
 import VoidGate from '@/components/main/VoidGate';
 import Footer from '@/components/Footer';
+import RealmMap from '@/components/main/RealmMap';
 
 const Index = () => {
   return (
@@ -21,6 +21,9 @@ const Index = () => {
         <Grimoire />
         <VoidGate />
       </main>
+      
+      <RealmMap />
+      
       <Footer />
     </div>
   );
