@@ -1,9 +1,10 @@
+
 import React, { useEffect, useState } from "react";
 import { Terminal, Code, Medal, Sword, Clock } from "lucide-react";
 import summonData from "@/data/summon.json";
 import { useToast } from "@/hooks/use-toast";
 
-// ClockSpell - Magical digital clock component
+// 🕰️ ChronoRune – Rewritten clock with realm location magic
 const ClockSpell = () => {
   const [currentTime, setCurrentTime] = useState<string>('');
   const [currentDate, setCurrentDate] = useState<string>('');
@@ -16,7 +17,7 @@ const ClockSpell = () => {
     const timeInterval = setInterval(() => {
       const now = new Date();
       
-      // Format time: HH:MM:SS
+      // Format time: HH:MM:SS (24-hour format)
       setCurrentTime(now.toLocaleTimeString('en-US', { 
         hour: '2-digit', 
         minute: '2-digit', 
@@ -61,7 +62,7 @@ const ClockSpell = () => {
   }, [toast]);
 
   return (
-    <div className="mt-6 bg-gray-900/60 border border-gray-800 p-4 rounded-md">
+    <div className="w-full bg-gray-900/60 border border-gray-800 p-4 rounded-md mb-6">
       <h3 className="text-sm text-gray-500 mb-2 flex items-center"><Clock className="w-4 h-4 mr-1" /> ARCANE TIMEKEEPER</h3>
       <div className="flex flex-col">
         <div className="text-xl font-jetbrains mb-1 typewriter text-gray-300">
@@ -113,6 +114,9 @@ const SummoningScroll = () => {
         <section id="summoning" className="py-24 min-h-[60vh] flex items-center">
             <div className="container mx-auto px-4">
                 <div className="max-w-3xl mx-auto bg-[#0a0a0a] border border-gray-800 rounded-md p-6 shadow-lg">
+                    {/* ChronoRune Clock - Positioned at the top of the scroll */}
+                    <ClockSpell />
+                    
                     <div className="flex flex-col md:flex-row items-center gap-8">
                         {/* ASCII Art or Symbol */}
                         <div className="w-full md:w-2/5 mb-6 md:mb-0">
@@ -134,9 +138,6 @@ const SummoningScroll = () => {
                                     <span className="text-gray-300">{tier}</span>
                                 </div>
                             </div>
-                            
-                            {/* ClockSpell component */}
-                            <ClockSpell />
                         </div>
 
                         {/* Intro Content */}
