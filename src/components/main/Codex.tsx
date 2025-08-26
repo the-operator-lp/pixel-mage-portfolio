@@ -14,8 +14,8 @@ const Codex = () => {
                     </p>
                     <div className="flex justify-center items-center mt-3">
                         <Github className="w-4 h-4 mr-2 text-gray-500" />
-                        <a href="https://github.com/shadowcaster" className="text-gray-400 hover:text-gray-200 transition font-jetbrains text-xs underline" target="_blank" rel="noopener noreferrer">
-                            github.com/shadowcaster
+                        <a href="https://github.com/loc-phuoc" className="text-gray-400 hover:text-gray-200 transition font-jetbrains text-xs underline" target="_blank" rel="noopener noreferrer">
+                            github.com/loc-phuoc
                         </a>
                     </div>
                 </div>

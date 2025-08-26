@@ -1,41 +1,53 @@
 [
     {
-        "title": "Senior Code Enchanter",
-        "company": "Arcane Technologies",
-        "period": "Campaign Years 2021-Present",
-        "description": "Led a raid party of 5 developers through treacherous web application dungeons. Successfully conjured React enchantments that increased performance by 40%.",
-        "achievements": ["Implemented CI/CD battle rituals", "Mentored 7 junior warlocks", "Banished legacy code demons"],
-        "xp": 2500,
+        "title": "Data Engineer Intern",
+        "company": "FPT Software HCMC",
+        "period": "Campaign Years 2024",
+        "description": "Built and deployed ETL pipelines using Python, Snowflake, and AWS for business-critical dashboards.",
+        "achievements": ["Implemented real-time data ingestion workflows", "Optimized data pipelines for faster processing"],
+        "xp": 500,
         "skills": [
-            { "name": "React", "level": 90 },
-            { "name": "TypeScript", "level": 85 },
-            { "name": "System Architecture", "level": 75 }
+            { "name": "Python", "level": 85 },
+            { "name": "Snowflake", "level": 50 },
+            { "name": "AWS (S3, Lambda)", "level": 50 }
         ]
     },
     {
-        "title": "Full-Stack Alchemist",
-        "company": "Eldritch Solutions Inc.",
-        "period": "Campaign Years 2018-2021",
-        "description": "Transmuted raw requirements into elegant code solutions. Crafted responsive interfaces with forbidden animations.",
-        "achievements": ["Forged REST API artifacts", "Reduced loading times by 60%", "Integrated third-party magical components"],
-        "xp": 1800,
+        "title": "Site Reliability Engineer",
+        "company": "Vietlink Solutions HCMC",
+        "period": "Campaign Years 2024-2025",
+        "description": "Provisioned infrastructure with Terraform and automated CI/CD pipelines, accelerating deployment by 40%.",
+        "achievements": ["Automated environment setup with Ansible", "Optimized deployment process using GitHub Actions"],
+        "xp": 1500,
         "skills": [
-            { "name": "Vue.js", "level": 80 },
-            { "name": "Node.js", "level": 75 },
-            { "name": "Database Design", "level": 70 }
+            { "name": "Terraform", "level": 60 },
+            { "name": "GitHub Actions", "level": 70 },
+            { "name": "Ansible", "level": 50 },
+            { "name": "Docker", "level": 80 },
+            { "name": "AWS", "level": 60 }
         ]
     },
     {
-        "title": "Frontend Apprentice",
-        "company": "Novice Guild Co.",
-        "period": "Campaign Years 2016-2018",
-        "description": "Learned the fundamentals of web development sorcery. Crafted HTML, CSS, and JavaScript spells to summon interactive user experiences.",
-        "achievements": ["Mastered responsive design scrolls", "Constructed jQuery components", "Implemented CSS animations"],
-        "xp": 1200,
+        "title": "Software Engineer",
+        "company": "Sorimachi Giken Niigata",
+        "period": "Campaign Years 2025",
+        "description": "Developed Android applications for payment gateway systems and built chatbot features.",
+        "achievements": ["Built intelligent chatbot functionalities", "Created payment gateway solutions for retail stores"],
+        "xp": 500,
         "skills": [
-            { "name": "HTML/CSS", "level": 70 },
-            { "name": "JavaScript", "level": 65 },
-            { "name": "jQuery", "level": 60 }
+            { "name": "Java", "level": 80 },
+            { "name": "Android Studio", "level": 60 },
+            { "name": "Python", "level": 85 }
+        ]
+    },
+    {
+        "title": "IT Consultant",
+        "company": "Netcompany HCMC",
+        "period": "Campaign Years 2025-Present",
+        "description": "Collaborated with clients from the EU to design tailored IT solutions aligned with business needs.",
+        "achievements": ["Gathered and analyzed client business requirements", "Designed custom IT solutions for diverse industries"],
+        "xp": 0,
+        "skills": [
         ]
     }
 ]

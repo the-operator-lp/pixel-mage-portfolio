@@ -68,7 +68,7 @@ const VoidGate = () => {
   };
 
   // Japanese numerals 1-8 and English for 9 (as requested)
-  const jpNumerals = ["一", "二", "三", "四", "五", "六", "七", "八", "9"];
+  const jpNumerals = ["一", "二", "三", "四", "五", "六", "七", "八", "九"];
 
   return (
     <section id="gate" className="py-16 bg-[#0c0c0c]">

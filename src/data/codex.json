@@ -1,34 +1,23 @@
 [
     {
-        "name": "Void Terminal",
-        "description": "A customizable terminal emulator with advanced features for developers and dark-themed UI options.",
-        "languages": ["TypeScript", "React", "Electron"],
-        "stars": 148,
-        "forks": 32,
-        "link": "https://github.com/shadowcaster/void-terminal"
+        "name": "Online Reading Platform",
+        "description": "A microservices-based blockchain platform with personalized content recommendations.",
+        "languages": ["Node.js", "Java", "Vue.js", "MongoDB", "AWS (ECS, ALB, EC2)", "Solidity", "Python"],
+        "stars": 0,
+        "forks": 0
     },
     {
-        "name": "Hex Engine",
-        "description": "Low-level graphics library for creating procedural dark fantasy visuals and animations.",
-        "languages": ["C++", "WebGL", "GLSL"],
-        "stars": 87,
-        "forks": 14,
-        "link": "https://github.com/shadowcaster/hex-engine"
+        "name": "Lunch Ordering System",
+        "description": "An internal platform to automate employee lunch ordering and delivery tracking.",
+        "languages": ["React.js", "Laravel", "AWS", "Docker", "GitHub Actions", "Terraform", "Ansible"],
+        "stars": 0,
+        "forks": 0
     },
     {
-        "name": "Rune Parser",
-        "description": "A compiler that translates mystical rune patterns into executable JavaScript code.",
-        "languages": ["JavaScript", "ANTLR", "NodeJS"],
-        "stars": 63,
-        "forks": 9,
-        "link": "https://github.com/shadowcaster/rune-parser"
-    },
-    {
-        "name": "Grimoire",
-        "description": "Documentation generator that creates dark-themed, interactive documentation websites.",
-        "languages": ["TypeScript", "React", "Markdown"],
-        "stars": 42,
-        "forks": 7,
-        "link": "https://github.com/shadowcaster/grimoire"
+        "name": "Real-Time Data Monitoring System",
+        "description": "End-to-end pipeline for ingesting and transforming real-time data.",
+        "languages": ["Snowflake", "AWS (S3, Lambda, CloudWatch)", "Python"],
+        "stars": 0,
+        "forks": 0
     }
 ]

@@ -1,0 +1,34 @@
+[
+    {
+        "id": "fpt-software",
+        "name": "FPT Software HCMC",
+        "engName": "FPT Software HCMC",
+        "x": 20,
+        "y": 80,
+        "description": "Built and deployed ETL pipelines using Python, Snowflake, and AWS for business-critical dashboards."
+    },
+    {
+        "id": "vietlink-solutions",
+        "name": "Vietlink Solutions HCMC",
+        "engName": "Vietlink Solutions HCMC",
+        "x": 50,
+        "y": 50,
+        "description": "Provisioned infrastructure with Terraform and automated CI/CD pipelines, accelerating deployment by 40%."
+    },
+    {
+        "id": "sorimachi-giken",
+        "name": "Sorimachi Giken Niigata",
+        "engName": "Sorimachi Giken Niigata",
+        "x": 80,
+        "y": 30,
+        "description": "Developed Android applications for payment gateway systems and built chatbot features."
+    },
+    {
+        "id": "netcompany",
+        "name": "Netcompany HCMC",
+        "engName": "Netcompany HCMC",
+        "x": 30,
+        "y": 40,
+        "description": "Collaborated with clients from the EU to design tailored IT solutions aligned with business needs."
+    }
+]
